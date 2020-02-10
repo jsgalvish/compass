@@ -6,7 +6,7 @@
     "md5": "^2.2.1",
     "overpass-frontend": "^2.4.2",
     "yaml": "^1.5.0",
-    "ecstatic": "3.0.0"
+    "ecstatic": "3.3.2"
   },
   "devDependencies": {
     "browserify": "^16.2.3",
