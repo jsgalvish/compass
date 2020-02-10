@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "async": "^2.6.2",
+    "boundingbox": "^1.1.0",
+    "md5": "^2.2.1",
+    "overpass-frontend": "^2.4.2",
+    "yaml": "^1.5.0",
+    "ecstatic": "3.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "http-server": "^0.11.1",
+    "standard": "^12.0.1",
+    "watchify": "^3.11.1"
+  },
+  "scripts": {
+    "build": "npm run build-main && npm run build-worker",
+    "build-main": "browserify src/index.js -o dist/vrmap.js",
+    "build-worker": "browserify src/worker.js -o dist/vrmap-worker.js",
+    "lint": "standard --fix src/*.js",
+    "start": "http-server ./ -p 3000",
+    "watch-main": "watchify --debug src/index.js -o dist/vrmap.js -v",
+    "watch-worker": "watchify --debug src/worker.js -o dist/vrmap-worker.js -v",
+    "install": "npm run build"
+  }
+}

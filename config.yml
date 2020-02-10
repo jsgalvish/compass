@@ -1,0 +1,48 @@
+---
+### Overpass Server ###
+overpassURL: https://overpass-api.de/api/interpreter
+
+### Background Map ###
+tileServer: https://tilecache.kairo.at/mapnik/
+# Alternatives
+# Basemap offers hires tiles for Austria.
+# tileServer: https://tilecache.kairo.at/basemaphires/
+
+tileZoom: 19
+
+tilesFromCenter: 5
+
+### Settings ###
+# limit count of features which will be added to the view per tick for
+# performance reasons
+maxFeatureAddPerTick: 50
+
+# Map objects will be loaded in direction of the view from the camera point.
+# The area calculates via these three parameters:
+# viewAngle: span a triangle from the camera point
+# viewDistance: max. distance from the eye
+# viewBuffer: an additional area around the triangle (include objects in the
+#   back)
+viewAngle: 50
+viewDistance: 300 # Meters
+viewBuffer: 70 # Meters
+
+### Settings for Layers ###
+# Which modules should be loaded (uncomment to disable modules)
+modules:
+- tiles     # background tiles
+- buildings
+- trees
+- tracks
+- routes    # moving vehicles on tram routes
+
+## Routes ##
+routeVehicleInterval: 60  # every n seconds
+routeVehicleSpeed: 0.005  # km/s
+
+### Location presets ###
+presets:
+- title: Holberton
+  latitude: 4.652005
+  longitude: -74.057381
+
