@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@turf/turf": "^5.1.6",
-    "async": "^2.6.2",
+    "async": "^2.6.4",
     "boundingbox": "^1.1.0",
     "md5": "^2.2.1",
     "overpass-frontend": "^2.4.2",
